@@ -11,22 +11,34 @@ var d2l = {
 						propertyPrefix = propertyPrefix ? propertyPrefix + "-" : "";
 						propertySuffix = propertySuffix ? "-" + propertySuffix : "";
 
-						var topResult = d2l.jasmine._private.createCompareStyle( propertyPrefix + 'top' + propertySuffix ).compare( actual, expected );
+						var topResult = d2l.jasmine._private.createCompareStyle(
+								propertyPrefix + 'top' + propertySuffix
+							).compare( actual, expected );
+
 						if ( !topResult.pass ) {
 							return topResult;
 						}
 
-						var rightResult = d2l.jasmine._private.createCompareStyle( propertyPrefix + 'right' + propertySuffix ).compare( actual, expected );
+						var rightResult = d2l.jasmine._private.createCompareStyle(
+								propertyPrefix + 'right' + propertySuffix
+							).compare( actual, expected );
+
 						if ( !rightResult.pass ) {
 							return rightResult;
 						}
 
-						var bottomResult = d2l.jasmine._private.createCompareStyle( propertyPrefix + 'bottom' + propertySuffix ).compare( actual, expected );
+						var bottomResult = d2l.jasmine._private.createCompareStyle(
+								propertyPrefix + 'bottom' + propertySuffix
+							).compare( actual, expected );
+
 						if ( !bottomResult.pass ) {
 							return bottomResult;
 						}
 
-						var leftResult = d2l.jasmine._private.createCompareStyle( propertyPrefix + 'left' + propertySuffix ).compare( actual, expected );
+						var leftResult = d2l.jasmine._private.createCompareStyle(
+								propertyPrefix + 'left' + propertySuffix
+							).compare( actual, expected );
+
 						if ( !leftResult.pass ) {
 							return leftResult;
 						}
@@ -188,22 +200,30 @@ var d2l = {
 				return {
 					compare: function( actual, expected ) {
 
-						var topRightResult = d2l.jasmine._private.createCompareStyle( 'border-top-right-radius' ).compare( actual, expected );
+						var topRightResult = d2l.jasmine._private.createCompareStyle( 'border-top-right-radius' )
+							.compare( actual, expected );
+
 						if ( !topRightResult.pass ) {
 							return topRightResult;
 						}
 
-						var bottomRightResult = d2l.jasmine._private.createCompareStyle( 'border-bottom-right-radius' ).compare( actual, expected );
+						var bottomRightResult = d2l.jasmine._private.createCompareStyle( 'border-bottom-right-radius' )
+							.compare( actual, expected );
+
 						if ( !bottomRightResult.pass ) {
 							return bottomRightResult;
 						}
 
-						var bottomLeftResult = d2l.jasmine._private.createCompareStyle( 'border-bottom-left-radius' ).compare( actual, expected );
+						var bottomLeftResult = d2l.jasmine._private.createCompareStyle( 'border-bottom-left-radius' )
+							.compare( actual, expected );
+
 						if ( !bottomLeftResult.pass ) {
 							return bottomLeftResult;
 						}
 
-						var topLeftResult = d2l.jasmine._private.createCompareStyle( 'border-top-left-radius' ).compare( actual, expected );
+						var topLeftResult = d2l.jasmine._private.createCompareStyle( 'border-top-left-radius' )
+							.compare( actual, expected );
+
 						if ( !topLeftResult.pass ) {
 							return topLeftResult;
 						}
@@ -241,11 +261,15 @@ var d2l = {
 			toHaveClassName: function() {
 				return {
 					compare: function( actualElement, expectedClass ) {
-						var hasClass = ( " " + actualElement.className + " " ).indexOf( " "+expectedClass+" " ) > -1;
+
+						var hasClass = ( " " + actualElement.className + " " )
+							.indexOf( " "+expectedClass+" " ) > -1;
+
 						return {
 							pass: hasClass,
 							message: 'Expected element to have class "' + expectedClass + '"" but it did not.'
 						};
+
 					}
 				};
 			},
@@ -259,10 +283,16 @@ var d2l = {
 					compare: function( actualDocument, expectedSelector ) {
 
 						if ( !actualDocument ) {
-							return { pass: false, message: 'The actualDocument value is not defined.' };
+							return {
+								pass: false,
+								message: 'The actualDocument value is not defined.'
+							};
 						}
 						if ( !expectedSelector ) {
-							return { pass: false, message: 'The expectedSelector value is not defined.' };
+							return {
+								pass: false,
+								message: 'The expectedSelector value is not defined.'
+							};
 						}
 
 						for ( var i=0; i<actualDocument.styleSheets.length; ++i ) {
