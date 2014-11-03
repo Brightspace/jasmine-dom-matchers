@@ -1,5 +1,5 @@
 {
-  "name": "d2l-jasmine-style-matchers",
+  "name": "vui-jasmine-style-matchers",
   "description": "A set of Jasmine matchers for more reader friendly style specs.",
   "version": "0.0.1",
   "author": "D2L Corporation",
