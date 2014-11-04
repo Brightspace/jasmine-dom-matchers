@@ -1,8 +1,7 @@
-var vui = {
-	jasmine: {
-		dom: {}
-	}
-};
+var vui = vui || {};
+
+vui.jasmine = vui.jasmine || {};
+vui.jasmine.dom = vui.jasmine.dom || {};
 
 vui.jasmine.dom._private = {
 
