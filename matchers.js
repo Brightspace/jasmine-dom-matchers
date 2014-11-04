@@ -1,8 +1,10 @@
-var d2l = {
-	jasmine: {}
+var vui = {
+	jasmine: {
+		dom: {}
+	}
 };
 
-d2l.jasmine._private = {
+vui.jasmine.dom._private = {
 
 	createCompareBoxValues: function( propertyPrefix, propertySuffix ) {
 		return {
@@ -11,7 +13,7 @@ d2l.jasmine._private = {
 				propertyPrefix = propertyPrefix ? propertyPrefix + "-" : "";
 				propertySuffix = propertySuffix ? "-" + propertySuffix : "";
 
-				var topResult = d2l.jasmine._private.createCompareStyle(
+				var topResult = vui.jasmine.dom._private.createCompareStyle(
 						propertyPrefix + 'top' + propertySuffix
 					).compare( actual, expected );
 
@@ -19,7 +21,7 @@ d2l.jasmine._private = {
 					return topResult;
 				}
 
-				var rightResult = d2l.jasmine._private.createCompareStyle(
+				var rightResult = vui.jasmine.dom._private.createCompareStyle(
 						propertyPrefix + 'right' + propertySuffix
 					).compare( actual, expected );
 
@@ -27,7 +29,7 @@ d2l.jasmine._private = {
 					return rightResult;
 				}
 
-				var bottomResult = d2l.jasmine._private.createCompareStyle(
+				var bottomResult = vui.jasmine.dom._private.createCompareStyle(
 						propertyPrefix + 'bottom' + propertySuffix
 					).compare( actual, expected );
 
@@ -35,7 +37,7 @@ d2l.jasmine._private = {
 					return bottomResult;
 				}
 
-				var leftResult = d2l.jasmine._private.createCompareStyle(
+				var leftResult = vui.jasmine.dom._private.createCompareStyle(
 						propertyPrefix + 'left' + propertySuffix
 					).compare( actual, expected );
 
@@ -111,16 +113,16 @@ d2l.jasmine._private = {
 
 };
 
-d2l.jasmine.matchers = {
+vui.jasmine.dom.matchers = {
 
 	toHaveAfterElementContent: function() {
-		return d2l.jasmine._private.createCompareStyle( 'content', ':after' );
+		return vui.jasmine.dom._private.createCompareStyle( 'content', ':after' );
 	},
 
 	toHaveAfterElementBase64Image: function() {
 		return {
 			compare: function( actual ) {
-				var compareObj = d2l.jasmine._private.createCompareStyle(
+				var compareObj = vui.jasmine.dom._private.createCompareStyle(
 					'content',
 					':after',
 					'startsWith'
@@ -131,25 +133,25 @@ d2l.jasmine.matchers = {
 	},
 
 	toHaveAfterElementDisplay: function() {
-		return d2l.jasmine._private.createCompareStyle( 'display', ':after' );
+		return vui.jasmine.dom._private.createCompareStyle( 'display', ':after' );
 	},
 
 	toHaveBackgroundColor: function() {
-		return d2l.jasmine._private.createCompareStyle( 'background-color' );
+		return vui.jasmine.dom._private.createCompareStyle( 'background-color' );
 	},
 
 	toHaveBackgroundPosition: function() {
-		return d2l.jasmine._private.createCompareStyle( 'background-position' );
+		return vui.jasmine.dom._private.createCompareStyle( 'background-position' );
 	},
 
 	toHaveBackgroundRepeat: function() {
-		return d2l.jasmine._private.createCompareStyle( 'background-repeat' );
+		return vui.jasmine.dom._private.createCompareStyle( 'background-repeat' );
 	},
 
 	toHaveBase64BackgroundImage: function() {
 		return {
 			compare: function( actual ) {
-				var compareObj = d2l.jasmine._private.createCompareStyle(
+				var compareObj = vui.jasmine.dom._private.createCompareStyle(
 					'background-image',
 					null,
 					'startsWith'
@@ -160,13 +162,13 @@ d2l.jasmine.matchers = {
 	},
 
 	toHaveBeforeElementContent: function() {
-		return d2l.jasmine._private.createCompareStyle( 'content', ':before' );
+		return vui.jasmine.dom._private.createCompareStyle( 'content', ':before' );
 	},
 
 	toHaveBeforeElementBase64Image: function() {
 		return {
 			compare: function( actual ) {
-				var compareObj = d2l.jasmine._private.createCompareStyle(
+				var compareObj = vui.jasmine.dom._private.createCompareStyle(
 					'content',
 					':before',
 					'startsWith'
@@ -177,51 +179,51 @@ d2l.jasmine.matchers = {
 	},
 
 	toHaveBeforeElementDisplay: function() {
-		return d2l.jasmine._private.createCompareStyle( 'display', ':before' );
+		return vui.jasmine.dom._private.createCompareStyle( 'display', ':before' );
 	},
 
 	toHaveBorder: function() {
-		return d2l.jasmine._private.createCompareBoxValues( 'border' );
+		return vui.jasmine.dom._private.createCompareBoxValues( 'border' );
 	},
 
 	toHaveBorderStyle: function() {
-		return d2l.jasmine._private.createCompareBoxValues( 'border', 'style' );
+		return vui.jasmine.dom._private.createCompareBoxValues( 'border', 'style' );
 	},
 
 	toHaveBorderWidth: function() {
-		return d2l.jasmine._private.createCompareBoxValues( 'border', 'width' );
+		return vui.jasmine.dom._private.createCompareBoxValues( 'border', 'width' );
 	},
 
 	toHaveBorderColor: function() {
-		return d2l.jasmine._private.createCompareBoxValues( 'border', 'color' );
+		return vui.jasmine.dom._private.createCompareBoxValues( 'border', 'color' );
 	},
 
 	toHaveBorderRadius: function() {
 		return {
 			compare: function( actual, expected ) {
 
-				var topRightResult = d2l.jasmine._private.createCompareStyle( 'border-top-right-radius' )
+				var topRightResult = vui.jasmine.dom._private.createCompareStyle( 'border-top-right-radius' )
 					.compare( actual, expected );
 
 				if ( !topRightResult.pass ) {
 					return topRightResult;
 				}
 
-				var bottomRightResult = d2l.jasmine._private.createCompareStyle( 'border-bottom-right-radius' )
+				var bottomRightResult = vui.jasmine.dom._private.createCompareStyle( 'border-bottom-right-radius' )
 					.compare( actual, expected );
 
 				if ( !bottomRightResult.pass ) {
 					return bottomRightResult;
 				}
 
-				var bottomLeftResult = d2l.jasmine._private.createCompareStyle( 'border-bottom-left-radius' )
+				var bottomLeftResult = vui.jasmine.dom._private.createCompareStyle( 'border-bottom-left-radius' )
 					.compare( actual, expected );
 
 				if ( !bottomLeftResult.pass ) {
 					return bottomLeftResult;
 				}
 
-				var topLeftResult = d2l.jasmine._private.createCompareStyle( 'border-top-left-radius' )
+				var topLeftResult = vui.jasmine.dom._private.createCompareStyle( 'border-top-left-radius' )
 					.compare( actual, expected );
 
 				if ( !topLeftResult.pass ) {
@@ -235,27 +237,27 @@ d2l.jasmine.matchers = {
 	},
 
 	toHaveBottomBorderColor: function() {
-		return d2l.jasmine._private.createCompareStyle( 'border-bottom-color' );
+		return vui.jasmine.dom._private.createCompareStyle( 'border-bottom-color' );
 	},
 
 	toHaveBottomLeftBorderRadius: function() {
-		return d2l.jasmine._private.createCompareStyle( 'border-bottom-left-radius' );
+		return vui.jasmine.dom._private.createCompareStyle( 'border-bottom-left-radius' );
 	},
 
 	toHaveBottomMargin: function() {
-		return d2l.jasmine._private.createCompareStyle( 'margin-bottom' );
+		return vui.jasmine.dom._private.createCompareStyle( 'margin-bottom' );
 	},
 
 	toHaveBottomPadding: function() {
-		return d2l.jasmine._private.createCompareStyle( 'padding-bottom' );
+		return vui.jasmine.dom._private.createCompareStyle( 'padding-bottom' );
 	},
 
 	toHaveBottomRightBorderRadius: function() {
-		return d2l.jasmine._private.createCompareStyle( 'border-bottom-right-radius' );
+		return vui.jasmine.dom._private.createCompareStyle( 'border-bottom-right-radius' );
 	},
 
 	toHaveBoxShadow: function() {
-		return d2l.jasmine._private.createCompareStyle( 'box-shadow' );
+		return vui.jasmine.dom._private.createCompareStyle( 'box-shadow' );
 	},
 
 	toHaveClassName: function() {
@@ -275,7 +277,7 @@ d2l.jasmine.matchers = {
 	},
 
 	toHaveColor: function() {
-		return d2l.jasmine._private.createCompareStyle( 'color' );
+		return vui.jasmine.dom._private.createCompareStyle( 'color' );
 	},
 
 	toHaveCssSelector: function() {
@@ -319,150 +321,150 @@ d2l.jasmine.matchers = {
 	},
 
 	toHaveCursor: function() {
-		return d2l.jasmine._private.createCompareStyle( 'cursor' );
+		return vui.jasmine.dom._private.createCompareStyle( 'cursor' );
 	},
 
 	toHaveDisplay: function() {
-		return d2l.jasmine._private.createCompareStyle( 'display' );
+		return vui.jasmine.dom._private.createCompareStyle( 'display' );
 	},
 
 	toHaveFontFamily: function() {
-		return d2l.jasmine._private.createCompareStyle( 'font-family' );
+		return vui.jasmine.dom._private.createCompareStyle( 'font-family' );
 	},
 
 	toHaveFontSize: function() {
-		return d2l.jasmine._private.createCompareStyle( 'font-size' );
+		return vui.jasmine.dom._private.createCompareStyle( 'font-size' );
 	},
 
 	toHaveFontStyle: function() {
-		return d2l.jasmine._private.createCompareStyle( 'font-style' );
+		return vui.jasmine.dom._private.createCompareStyle( 'font-style' );
 	},
 
 	toHaveFontWeight: function() {
-		return d2l.jasmine._private.createCompareStyle( 'font-weight' );
+		return vui.jasmine.dom._private.createCompareStyle( 'font-weight' );
 	},
 
 	toHaveHeight: function() {
-		return d2l.jasmine._private.createCompareStyle( 'height' );
+		return vui.jasmine.dom._private.createCompareStyle( 'height' );
 	},
 
 	toHaveLeftBorderColor: function() {
-		return d2l.jasmine._private.createCompareStyle( 'border-left-color' );
+		return vui.jasmine.dom._private.createCompareStyle( 'border-left-color' );
 	},
 
 	toHaveLeftMargin: function() {
-		return d2l.jasmine._private.createCompareStyle( 'margin-left' );
+		return vui.jasmine.dom._private.createCompareStyle( 'margin-left' );
 	},
 
 	toHaveLeftPadding: function() {
-		return d2l.jasmine._private.createCompareStyle( 'padding-left' );
+		return vui.jasmine.dom._private.createCompareStyle( 'padding-left' );
 	},
 
 	toHaveLineHeight: function() {
-		return d2l.jasmine._private.createCompareStyle( 'line-height' );
+		return vui.jasmine.dom._private.createCompareStyle( 'line-height' );
 	},
 
 	toHaveListStyleImage: function() {
-		return d2l.jasmine._private.createCompareStyle( 'list-style-image' );
+		return vui.jasmine.dom._private.createCompareStyle( 'list-style-image' );
 	},
 
 	toHaveListStylePosition: function() {
-		return d2l.jasmine._private.createCompareStyle( 'list-style-position' );
+		return vui.jasmine.dom._private.createCompareStyle( 'list-style-position' );
 	},
 
 	toHaveListStyleType: function() {
-		return d2l.jasmine._private.createCompareStyle( 'list-style-type' );
+		return vui.jasmine.dom._private.createCompareStyle( 'list-style-type' );
 	},
 
 	toHaveMargin: function() {
-		return d2l.jasmine._private.createCompareBoxValues( 'margin' );
+		return vui.jasmine.dom._private.createCompareBoxValues( 'margin' );
 	},
 
 	toHaveMaxHeight: function() {
-		return d2l.jasmine._private.createCompareStyle( 'max-height' );
+		return vui.jasmine.dom._private.createCompareStyle( 'max-height' );
 	},
 
 	toHaveMaxWidth: function() {
-		return d2l.jasmine._private.createCompareStyle( 'max-width' );
+		return vui.jasmine.dom._private.createCompareStyle( 'max-width' );
 	},
 
 	toHaveMinHeight: function() {
-		return d2l.jasmine._private.createCompareStyle( 'min-height' );
+		return vui.jasmine.dom._private.createCompareStyle( 'min-height' );
 	},
 
 	toHaveMinWidth: function() {
-		return d2l.jasmine._private.createCompareStyle( 'min-width' );
+		return vui.jasmine.dom._private.createCompareStyle( 'min-width' );
 	},
 
 	toHaveOutlineColor: function() {
-		return d2l.jasmine._private.createCompareStyle( 'outline-color' );
+		return vui.jasmine.dom._private.createCompareStyle( 'outline-color' );
 	},
 
 	toHaveOutlineStyle: function() {
-		return d2l.jasmine._private.createCompareStyle( 'outline-style' );
+		return vui.jasmine.dom._private.createCompareStyle( 'outline-style' );
 	},
 
 	toHaveOutlineWidth: function() {
-		return d2l.jasmine._private.createCompareStyle( 'outline-width' );
+		return vui.jasmine.dom._private.createCompareStyle( 'outline-width' );
 	},
 
 	toHaveOverflow: function() {
-		return d2l.jasmine._private.createCompareStyle( 'overflow' );
+		return vui.jasmine.dom._private.createCompareStyle( 'overflow' );
 	},
 
 	toHavePadding: function() {
-		return d2l.jasmine._private.createCompareBoxValues( 'padding' );
+		return vui.jasmine.dom._private.createCompareBoxValues( 'padding' );
 	},
 
 	toHaveRightBorderColor: function() {
-		return d2l.jasmine._private.createCompareStyle( 'border-right-color' );
+		return vui.jasmine.dom._private.createCompareStyle( 'border-right-color' );
 	},
 
 	toHaveRightMargin: function() {
-		return d2l.jasmine._private.createCompareStyle( 'margin-right' );
+		return vui.jasmine.dom._private.createCompareStyle( 'margin-right' );
 	},
 
 	toHaveTextAlign: function() {
-		return d2l.jasmine._private.createCompareStyle( 'text-align' );
+		return vui.jasmine.dom._private.createCompareStyle( 'text-align' );
 	},
 
 	toHaveRightPadding: function() {
-		return d2l.jasmine._private.createCompareStyle( 'padding-right' );
+		return vui.jasmine.dom._private.createCompareStyle( 'padding-right' );
 	},
 
 	toHaveTextDecoration: function() {
-		return d2l.jasmine._private.createCompareStyle( 'text-decoration' );
+		return vui.jasmine.dom._private.createCompareStyle( 'text-decoration' );
 	},
 
 	toHaveTopBorderColor: function() {
-		return d2l.jasmine._private.createCompareStyle( 'border-top-color' );
+		return vui.jasmine.dom._private.createCompareStyle( 'border-top-color' );
 	},
 
 	toHaveTopLeftBorderRadius: function() {
-		return d2l.jasmine._private.createCompareStyle( 'border-top-left-radius' );
+		return vui.jasmine.dom._private.createCompareStyle( 'border-top-left-radius' );
 	},
 
 	toHaveTopMargin: function() {
-		return d2l.jasmine._private.createCompareStyle( 'margin-top' );
+		return vui.jasmine.dom._private.createCompareStyle( 'margin-top' );
 	},
 
 	toHaveTopPadding: function() {
-		return d2l.jasmine._private.createCompareStyle( 'padding-top' );
+		return vui.jasmine.dom._private.createCompareStyle( 'padding-top' );
 	},
 
 	toHaveTopRightBorderRadius: function() {
-		return d2l.jasmine._private.createCompareStyle( 'border-top-right-radius' );
+		return vui.jasmine.dom._private.createCompareStyle( 'border-top-right-radius' );
 	},
 
 	toHaveWidth: function() {
-		return d2l.jasmine._private.createCompareStyle( 'width' );
+		return vui.jasmine.dom._private.createCompareStyle( 'width' );
 	},
 
 	toBeOnBrowser: function( ) {
 		return {
 			compare: function( actual, browserExpected ) {
 
-				var expected = d2l.jasmine._private.extractBrowser(
+				var expected = vui.jasmine.dom._private.extractBrowser(
 						navigator.userAgent,
 						browserExpected
 					);
@@ -481,7 +483,7 @@ d2l.jasmine.matchers = {
 			compare: function( actual, agentExpected ) {
 				var userAgent = navigator.userAgent;
 
-				var expected = d2l.jasmine._private.extractBrowser(
+				var expected = vui.jasmine.dom._private.extractBrowser(
 						userAgent,
 						agentExpected
 					);

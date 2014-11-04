@@ -1,4 +1,4 @@
-jasmine-style-matchers
+vui-jasmine-dom-matchers
 ======================
 
-A set of Jasmine matchers for more reader friendly style specs. 
+A set of Jasmine matchers for more reader friendly style specs.

@@ -1,7 +1,7 @@
 {
-  "name": "vui-jasmine-style-matchers",
-  "description": "A set of Jasmine matchers for more reader friendly style specs.",
-  "version": "0.0.2",
+  "name": "vui-jasmine-dom-matchers",
+  "description": "A set of Jasmine matchers for more reader friendly dom specs.",
+  "version": "0.0.3",
   "author": "D2L Corporation",
   "license": "Apache-2.0",
   "repository": {
@@ -12,6 +12,7 @@
   },
   "keywords": [
     "d2l",
+    "dom",
     "jasmine",
     "valence-ui",
     "vui"
