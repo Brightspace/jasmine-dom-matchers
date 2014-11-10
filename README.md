@@ -13,4 +13,4 @@ npm install vui-jasmine-dom-matchers
 
 ### Code Style
 
-This repository is configured with [EditorConfig](http://editorconfig.org) rules and contributions should make use of them. See the valence-ui [Code Style wiki page](https://github.com/Desire2Learn-Valence/valence-ui-helpers/wiki/Code-Style) for details.
+This repository is configured with [EditorConfig](http://editorconfig.org) rules and contributions should make use of them. See the valence-ui [Code Style wiki page](https://github.com/Brightspace/valence-ui-helpers/wiki/Code-Style) for details.
