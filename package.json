@@ -1,7 +1,7 @@
 {
   "name": "vui-jasmine-dom-matchers",
   "description": "A set of Jasmine matchers for more reader friendly dom specs.",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "D2L Corporation",
   "license": "Apache-2.0",
   "repository": {
