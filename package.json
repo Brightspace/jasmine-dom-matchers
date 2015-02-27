@@ -1,18 +1,16 @@
 {
-  "name": "vui-jasmine-dom-matchers",
+  "name": "jasmine-dom-matchers",
   "description": "A set of Jasmine matchers for more reader friendly dom specs.",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "author": "D2L Corporation",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Brightspace/valence-ui-jasmine-dom-matchers.git"
+    "url": "https://github.com/Brightspace/jasmine-dom-matchers.git"
   },
   "keywords": [
     "d2l",
     "dom",
-    "jasmine",
-    "valence-ui",
-    "vui"
+    "jasmine"
   ]
 }
