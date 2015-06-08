@@ -1,7 +1,7 @@
 {
   "name": "jasmine-dom-matchers",
+  "version": "0.1.1",
   "description": "A set of Jasmine matchers for more reader friendly dom specs.",
-  "version": "0.1.0",
   "author": "D2L Corporation",
   "license": "Apache-2.0",
   "repository": {
@@ -12,5 +12,9 @@
     "d2l",
     "dom",
     "jasmine"
-  ]
+  ],
+  "bugs": {
+    "url": "https://github.com/Brightspace/jasmine-dom-matchers/issues"
+  },
+  "homepage": "https://github.com/Brightspace/jasmine-dom-matchers"
 }
