@@ -239,6 +239,10 @@ vui.jasmine.dom.matchers = {
 		return vui.jasmine.dom._private.createCompareStyle( 'border-bottom-color' );
 	},
 
+	toHaveBottomBorderStyle: function() {
+		return vui.jasmine.dom._private.createCompareStyle( 'border-bottom-style' );
+	},
+
 	toHaveBottomBorderWidth: function() {
 		return vui.jasmine.dom._private.createCompareStyle( 'border-bottom-width' );
 	},
@@ -355,6 +359,10 @@ vui.jasmine.dom.matchers = {
 		return vui.jasmine.dom._private.createCompareStyle( 'border-left-color' );
 	},
 
+	toHaveLeftBorderStyle: function() {
+		return vui.jasmine.dom._private.createCompareStyle( 'border-left-style' );
+	},
+
 	toHaveLeftBorderWidth: function() {
 		return vui.jasmine.dom._private.createCompareStyle( 'border-left-width' );
 	},
@@ -427,6 +435,10 @@ vui.jasmine.dom.matchers = {
 		return vui.jasmine.dom._private.createCompareStyle( 'border-right-color' );
 	},
 
+	toHaveRightBorderStyle: function() {
+		return vui.jasmine.dom._private.createCompareStyle( 'border-right-style' );
+	},
+
 	toHaveRightBorderWidth: function() {
 		return vui.jasmine.dom._private.createCompareStyle( 'border-right-width' );
 	},
@@ -449,6 +461,10 @@ vui.jasmine.dom.matchers = {
 
 	toHaveTopBorderColor: function() {
 		return vui.jasmine.dom._private.createCompareStyle( 'border-top-color' );
+	},
+
+	toHaveTopBorderStyle: function() {
+		return vui.jasmine.dom._private.createCompareStyle( 'border-top-style' );
 	},
 
 	toHaveTopBorderWidth: function() {
